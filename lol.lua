@@ -1,7 +1,4 @@
-getgenv().WebhookURL = ""
+local network = getupvalue(require(game.ReplicatedStorage.Module.AlexChassis).SetEvent, 1)
+local keysList = getupvalue(getupvalue(network.FireServer, 1), 3)
 
-getgenv().WaitTrue = false;
-
-getgenv().Wait = 0; -- How much time to wait before it hops, use if you get synapse firewall issue.
-
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Eviltwin001/Comet-Farm/main/Comet%20Farm%20V2"))()
+network:FireServer('m5qcu4ya', 'C4')
